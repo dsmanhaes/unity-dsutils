@@ -10,6 +10,7 @@ public class PostalController
 
     private static string _path;
     private static QRConfig _configs;
+    
     private static QRConfig _configsCache
     {
         get

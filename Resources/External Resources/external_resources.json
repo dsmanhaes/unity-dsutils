@@ -1,0 +1,118 @@
+{
+  "config": {
+    "gameTime": 30,
+    "boat5LossDistance": 0.5,
+    "meta": [
+      {
+        "name": "screens",
+        "files": [
+          {
+            "name": "idleScreen",
+            "fileName": "idle.png",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "name": "gameBackground",
+            "fileName": "background.png",
+            "width": 1920,
+            "height": 1080
+          },
+          {
+            "name": "gameoverScreen",
+            "fileName": "gameover.png",
+            "width": 1920,
+            "height": 1080
+          }
+        ]
+      },
+      {
+        "name": "racers",
+        "files": [
+          {
+            "name": "racer1",
+            "fileName": "racer1.png",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "name": "racer2",
+            "fileName": "racer2.png",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "name": "racer3",
+            "fileName": "racer3.png",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "name": "racer4",
+            "fileName": "racer4.png",
+            "width": 100,
+            "height": 100
+          },
+          {
+            "name": "racer5",
+            "fileName": "racer5.png",
+            "width": 100,
+            "height": 100
+          }
+        ]
+      }
+    ]
+  },
+  "folders": [
+    {
+      "name": "screens",
+      "files": [
+        {
+          "name": "idleScreen",
+          "type": "Texture2D",
+          "placeholder": "placeholder"
+        },
+        {
+          "name": "gameBackground",
+          "type": "Texture2D",
+          "placeholder": "placeholder"
+        },
+        {
+          "name": "gameoverScreen",
+          "type": "Texture2D",
+          "placeholder": "placeholder"
+        }
+      ]
+    },
+    {
+      "name": "racers",
+      "files": [
+        {
+          "name": "racer1",
+          "type": "Texture2D",
+          "placeholder": "transparent_placeholder"
+        },
+        {
+          "name": "racer2",
+          "type": "Texture2D",
+          "placeholder": "transparent_placeholder"
+        },
+        {
+          "name": "racer3",
+          "type": "Texture2D",
+          "placeholder": "transparent_placeholder"
+        },
+        {
+          "name": "racer4",
+          "type": "Texture2D",
+          "placeholder": "transparent_placeholder"
+        },
+        {
+          "name": "racer5",
+          "type": "Texture2D",
+          "placeholder": "transparent_placeholder"
+        }
+      ]
+    }
+  ]
+}
