@@ -1,27 +1,26 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 
-namespace Solve {
-
-  namespace ExternalResources {
-
+namespace Solve
+{
+  namespace ExternalResources
+  {
     [Serializable]
-    public class ResourcesConfig {
+    public class ResourcesConfig
+    {
       public ExternalConfig config;
       public ResourcesFolder[] folders;
     }
-
     [Serializable]
-    public class ResourcesFolder {
+    public class ResourcesFolder
+    {
       public string name;
+      public string fileType;
       public ResourcesFile[] files;
     }
-
     [Serializable]
-    public class ResourcesFile {
+    public class ResourcesFile
+    {
       public string name;
-      public string type;
       public string placeholder;
     }
   }
