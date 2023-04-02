@@ -1,53 +1,38 @@
-using System.IO;
 using UnityEngine;
 
 namespace Solve
 {
   namespace Postal
   {
+    using JSON;
+    using Debug;
+
     public class PostalController
     {
-      public static string QRCodePath
+      public static string PostalPath
       { get { return _configsCache.abspath; } }
-      public static string QRCodeURL
+      public static string PostalURL
       { get { return _configsCache.url; } }
-      private static string _path;
-      private static QRConfig _configs;
-      private static QRConfig _configsCache
+      private static PostalConfig _configs;
+      private static PostalConfig _configsCache
       {
         get
         {
-          if (_configs == null)
-          {
-            _path = Application.dataPath + "/../../qrcode.json";
-            if (File.Exists(_path)) LoadConfig();
-            else CreateConfig();
-          }
+          if (_configs == null) LoadConfig();
           return _configs;
         }
       }
       private static void LoadConfig()
       {
-        string json = File.ReadAllText(_path);
-        _configs = JsonUtility.FromJson<QRConfig>(json);
+        string path = Application.dataPath + "/../../postal.json";
+        PostalConfig defaultConfig = new PostalConfig();
+        defaultConfig.url = "https://postal.social/projeto/?";
+        defaultConfig.abspath = "C:/Teste/";
+        _configs = JSONController<PostalConfig>.GetObject(path, defaultConfig);
         if (string.IsNullOrEmpty(_configs.url) ||
             string.IsNullOrEmpty(_configs.abspath))
-          CreateConfig();
-      }
-      private static void CreateConfig()
-      {
-        _configs = new QRConfig();
-        _configs.url = "https://postal.social/projeto/?";
-        _configs.abspath = "C:/Teste/";
-        string json = JsonUtility.ToJson(_configs);
-        File.WriteAllText(_path, json);
-        Debug.Log("Arquivo de configuração criado com sucesso em " + _path);
-      }
-      [System.Serializable]
-      private class QRConfig
-      {
-        public string url;
-        public string abspath;
+        _configs = JSONController<PostalConfig>.OverwriteObject(path, defaultConfig);
+        DebugController.Log(typeof(PostalController), "Configurations loaded");
       }
     }
   }
