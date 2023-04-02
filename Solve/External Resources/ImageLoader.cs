@@ -5,6 +5,8 @@ namespace Solve
 {
   namespace ExternalResources
   {
+    using Debug;
+
     public class ImageLoader
     {
       public static Texture2D LoadTexture2D(string filePath, string placeholderPath, int width, int height)
@@ -14,13 +16,14 @@ namespace Solve
         {
           byte[] fileData = File.ReadAllBytes(filePath);
           texture.LoadImage(fileData);
+          DebugController.Log(typeof(ResourceFetch), "Image loaded at: " + filePath);
         }
         else
         {
           texture = Resources.Load<Texture2D>(placeholderPath);
           byte[] bytes = texture.EncodeToPNG();
           File.WriteAllBytes(filePath, bytes);
-          Debug.Log("ExternalResources: Created placeholder at: " + filePath);
+          DebugController.Log(typeof(ResourceFetch), "Created placeholder at: " + filePath);
         }
         return texture;
       }

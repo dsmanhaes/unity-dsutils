@@ -14,7 +14,7 @@ namespace Solve
     public class ResourcesFolder
     {
       public string name;
-      public string fileType;
+      public ResourceType fileType;
       public ResourcesFile[] files;
     }
     [Serializable]
