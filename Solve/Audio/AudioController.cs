@@ -4,30 +4,10 @@ namespace Solve
 {
   namespace Audio
   {
+    using Debug;
+
     public static class AudioController
     {
-      private class AudioControllerObject : MonoBehaviour
-      {
-        public void Awake()
-        {
-          DontDestroyOnLoad(this);
-        }
-      }
-      private class AudioPlayerObject : MonoBehaviour
-      {
-        private AudioSource _source;
-        public void Start()
-        {
-          _source = gameObject.GetComponent<AudioSource>();
-        }
-        public void Update()
-        {
-          if (!_source.isPlaying)
-          {
-            Destroy(gameObject);
-          }
-        }
-      }
       private static Transform _transform;
       private static Transform _controller
       {
@@ -35,7 +15,8 @@ namespace Solve
         {
           if (_transform == null)
           {
-            GameObject gameObject = new GameObject("Audio Controller Sources", typeof(AudioControllerObject));
+            DebugController.Log(typeof(AudioController), "Creating Audio Object");
+            GameObject gameObject = new GameObject("AudioController", typeof(AudioControllerObject));
             _transform = gameObject.transform;
           }
           return _transform;
@@ -43,12 +24,13 @@ namespace Solve
       }
       private static AudioSource CreateAudioSource()
       {
-        GameObject gameObject = new GameObject("Audio Player", typeof(AudioPlayerObject), typeof(AudioSource));
+        GameObject gameObject = new GameObject("AudioPlayer", typeof(AudioPlayerObject), typeof(AudioSource));
         gameObject.transform.parent = _controller;
         return gameObject.GetComponent<AudioSource>();
       }
       public static AudioSource Play(AudioClip clip)
       {
+        DebugController.Log(typeof(AudioController), "Creating Audio player " + clip.name);
         AudioSource source = CreateAudioSource();
         source.clip = clip;
         source.Play();
