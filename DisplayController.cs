@@ -1,3 +1,4 @@
+// Script to activate all monitors i multi monitor aplications
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

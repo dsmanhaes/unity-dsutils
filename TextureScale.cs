@@ -1,3 +1,4 @@
+// Image resize script
 // Only works on ARGB32, RGB24 and Alpha8 textures that are marked readable
  
 using System.Threading;

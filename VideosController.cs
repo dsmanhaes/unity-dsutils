@@ -1,3 +1,4 @@
+// Script to manage multi video players
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,6 +44,7 @@ public class VideosController : MonoBehaviour
             video.Stop();
             video.Play();
             yield return new WaitForSeconds((float)video.clip.length);
+            StartCoroutine(AsyncShowFirstFrame(video));
         }
         _isPlaying = false;
     }
