@@ -1,6 +1,6 @@
 {
   "config": {
-    "gameTime": 30,
+    "idleResetTime": 60,
     "meta": {
       "screens": {
         "idleScreen": {
@@ -8,8 +8,8 @@
           "width": 1920,
           "height": 1080
         },
-        "gameBackground": {
-          "fileName": "background.png",
+        "tutorialScreen": {
+          "fileName": "tutorial.png",
           "width": 1920,
           "height": 1080
         },
@@ -58,7 +58,7 @@
           "placeholder": "placeholder"
         },
         {
-          "name": "gameBackground",
+          "name": "tutorialScreen",
           "placeholder": "placeholder"
         },
         {

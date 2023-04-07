@@ -7,7 +7,7 @@ namespace Solve
     [Serializable]
     public class ExternalConfig
     {
-      public int gameTime;
+      public int idleResetTime;
       public MetaData meta;
     }
     [Serializable]
@@ -20,7 +20,7 @@ namespace Solve
     public class ScreensFolder
     {
       public ExternalFile idleScreen;
-      public ExternalFile gameBackground;
+      public ExternalFile tutorialScreen;
       public ExternalFile gameoverScreen;
     }
     [Serializable]
