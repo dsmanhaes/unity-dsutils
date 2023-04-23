@@ -7,37 +7,63 @@ namespace Solve
     [Serializable]
     public class ExternalConfig
     {
-      public int idleResetTime;
+      public int quantityToShow;
+      public int spawnerInterval;
+      public int port;
+      public int cupcake1X;
+      public int cupcake1Y;
+      public int cupcake1Scale;
+      public int cupcake2X;
+      public int cupcake2Y;
+      public int cupcake2Scale;
+      public int cupcake3X;
+      public int cupcake3Y;
+      public int cupcake3Scale;
       public MetaData meta;
     }
     [Serializable]
     public class MetaData
     {
-      public ScreensFolder screens;
-      public RacersFolder racers;
+      public GeneralFolder general;
+      public VideoFolder video;
     }
     [Serializable]
-    public class ScreensFolder
+    public class GeneralFolder
     {
-      public ExternalFile idleScreen;
-      public ExternalFile tutorialScreen;
-      public ExternalFile gameoverScreen;
+      public string cristalBase;
+      public string syrup01;
+      public string syrup02;
+      public string syrup03;
+      public string syrup04;
+      public string pan01;
+      public string pan02;
+      public string pan03;
+      public string pan04;
+      public string fruit01;
+      public string fruit02;
+      public string fruit03;
+      public string fruit04;
+      public string sprinkles01;
+      public string sprinkles02;
+      public string sprinkles03;
+      public string sprinkles04;
+      public string cake01;
+      public string cake02;
+      public string cake03;
+      public string cake04;
+      public string filling01;
+      public string filling02;
+      public string filling03;
+      public string filling04;
+      public string icing01;
+      public string icing02;
+      public string icing03;
+      public string icing04;
     }
     [Serializable]
-    public class RacersFolder
+    public class VideoFolder
     {
-      public ExternalFile racer1;
-      public ExternalFile racer2;
-      public ExternalFile racer3;
-      public ExternalFile racer4;
-      public ExternalFile racer5;
-    }
-    [Serializable]
-    public class ExternalFile
-    {
-      public string fileName;
-      public int width;
-      public int height;
+      public string video;
     }
   }
 }

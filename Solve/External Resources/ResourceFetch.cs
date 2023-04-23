@@ -37,8 +37,15 @@ namespace Solve
         if (file == "" || file == null)
           DebugController.Error(typeof(ResourceFetch), "The file name isn't set");
         if (type == ResourceType.Sprite)
-          GetComponent<Image>().sprite = (Sprite)ExternalResources.contents[folder][file];
+          LoadSprite();
         DebugController.Log(typeof(ResourceFetch), "Resource fetched successfully " + folder + "/" + file);
+      }
+      private void LoadSprite()
+      {
+        Sprite sprite = (Sprite)ExternalResources.contents[folder][file];
+        GetComponent<Image>().sprite = sprite;
+        Vector2 size = new Vector2(sprite.texture.width, sprite.texture.height);
+        GetComponent<RectTransform>().sizeDelta = size;
       }
     }
   }

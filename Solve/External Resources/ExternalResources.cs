@@ -1,4 +1,3 @@
-using System.IO;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -28,16 +27,14 @@ namespace Solve
         }
       }
       private static Dictionary<string, Dictionary<string, object>> _resourcesContent;
-      private static string _externalPath = Application.dataPath + "/../_res/";
+      private static string _externalPath = JSONController.JSONPath;
       private static ResourcesConfig _resourcesConfig;
       private static void LoadConfigsCache()
       {
         TextAsset rawJson = Resources.Load<TextAsset>("External Resources/external_resources");
         _resourcesConfig = JsonUtility.FromJson<ResourcesConfig>(rawJson.text);
-        Directory.CreateDirectory(_externalPath);
-        string path = _externalPath + "config.json";
         ExternalConfig defaultConfig = _resourcesConfig.config;
-        _resourcesConfig.config = JSONController<ExternalConfig>.GetObject(path, defaultConfig);
+        _resourcesConfig.config = JSONController.GetObject<ExternalConfig>("config.json", defaultConfig);
         DebugController.Log(typeof(ExternalResources), "Loading external files...");
         _resourcesContent = FilesLoader.LoadAllFolders(_resourcesConfig.folders, _externalPath, _resourcesConfig.config.meta);
         DebugController.Log(typeof(ExternalResources), "All configurations was loaded");

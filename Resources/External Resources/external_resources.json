@@ -1,96 +1,95 @@
 {
   "config": {
-    "idleResetTime": 60,
+    "quantityToShow": 10,
+    "spawnerInterval": 3,
+    "port": 10101,
+    "cupcake1X": -750,
+    "cupcake1Y": -450,
+    "cupcake1Scale": 1,
+    "cupcake2X": -400,
+    "cupcake2Y": -450,
+    "cupcake2Scale": 1,
+    "cupcake3X": -50,
+    "cupcake3Y": -450,
+    "cupcake3Scale": 1,
     "meta": {
-      "screens": {
-        "idleScreen": {
-          "fileName": "idle.png",
-          "width": 1920,
-          "height": 1080
-        },
-        "tutorialScreen": {
-          "fileName": "tutorial.png",
-          "width": 1920,
-          "height": 1080
-        },
-        "gameoverScreen": {
-          "fileName": "gameover.png",
-          "width": 1920,
-          "height": 1080
-        }
+      "general": {
+        "cristalBase": "base.png",
+        "syrup01": "calda-01.png",
+        "syrup02": "calda-02.png",
+        "syrup03": "calda-03.png",
+        "syrup04": "calda-04.png",
+        "pan01": "forminha-01.png",
+        "pan02": "forminha-02.png",
+        "pan03": "forminha-03.png",
+        "pan04": "forminha-04.png",
+        "fruit01": "fruta-01.png",
+        "fruit02": "fruta-02.png",
+        "fruit03": "fruta-03.png",
+        "fruit04": "fruta-04.png",
+        "sprinkles01": "granulado-01.png",
+        "sprinkles02": "granulado-02.png",
+        "sprinkles03": "granulado-03.png",
+        "sprinkles04": "granulado-04.png",
+        "cake01": "massa-01.png",
+        "cake02": "massa-02.png",
+        "cake03": "massa-03.png",
+        "cake04": "massa-04.png",
+        "filling01": "recheio-01.png",
+        "filling02": "recheio-02.png",
+        "filling03": "recheio-03.png",
+        "filling04": "recheio-04.png",
+        "icing01": "cobertura-01.png",
+        "icing02": "cobertura-02.png",
+        "icing03": "cobertura-03.png",
+        "icing04": "cobertura-04.png"
       },
-      "racers": {
-        "racer1": {
-          "fileName": "racer1.png",
-          "width": 100,
-          "height": 100
-        },
-        "racer2": {
-          "fileName": "racer2.png",
-          "width": 100,
-          "height": 100
-        },
-        "racer3": {
-          "fileName": "racer3.png",
-          "width": 100,
-          "height": 100
-        },
-        "racer4": {
-          "fileName": "racer4.png",
-          "width": 100,
-          "height": 100
-        },
-        "racer5": {
-          "fileName": "racer5.png",
-          "width": 100,
-          "height": 100
-        }
+      "video": {
+        "video": "background.mp4"
       }
     }
   },
   "folders": [
     {
-      "name": "screens",
+      "name": "general",
       "fileType": "Sprite",
       "files": [
-        {
-          "name": "idleScreen",
-          "placeholder": "placeholder"
-        },
-        {
-          "name": "tutorialScreen",
-          "placeholder": "placeholder"
-        },
-        {
-          "name": "gameoverScreen",
-          "placeholder": "placeholder"
-        }
+        "cristalBase",
+        "syrup01",
+        "syrup02",
+        "syrup03",
+        "syrup04",
+        "pan01",
+        "pan02",
+        "pan03",
+        "pan04",
+        "fruit01",
+        "fruit02",
+        "fruit03",
+        "fruit04",
+        "sprinkles01",
+        "sprinkles02",
+        "sprinkles03",
+        "sprinkles04",
+        "cake01",
+        "cake02",
+        "cake03",
+        "cake04",
+        "filling01",
+        "filling02",
+        "filling03",
+        "filling04",
+        "icing01",
+        "icing02",
+        "icing03",
+        "icing04"
       ]
     },
     {
-      "name": "racers",
-      "fileType": "Texture2D",
+      "name": "video",
+      "fileType": "Video",
       "files": [
-        {
-          "name": "racer1",
-          "placeholder": "transparent_placeholder"
-        },
-        {
-          "name": "racer2",
-          "placeholder": "transparent_placeholder"
-        },
-        {
-          "name": "racer3",
-          "placeholder": "transparent_placeholder"
-        },
-        {
-          "name": "racer4",
-          "placeholder": "transparent_placeholder"
-        },
-        {
-          "name": "racer5",
-          "placeholder": "transparent_placeholder"
-        }
+        "video"
       ]
     }
   ]

@@ -6,7 +6,8 @@ namespace Solve
     public enum ResourceType
     {
       Sprite,
-      Texture2D
+      Texture2D,
+      Video
     }
   }
 }

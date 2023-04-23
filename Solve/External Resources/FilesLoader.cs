@@ -1,12 +1,14 @@
-using System.IO;
-using System.Collections.Generic;
-
 namespace Solve
 {
   namespace ExternalResources
   {
+    using System;
+    using System.IO;
+    using System.Collections.Generic;
+    using Debug;
     public static class FilesLoader
     {
+      private static string placeholderPath = "External Resources/Placeholders/";
       public static Dictionary<string, Dictionary<string, object>> LoadAllFolders(ResourcesFolder[] folders, string path, MetaData meta)
       {
         Dictionary<string, Dictionary<string, object>> contents = new Dictionary<string, Dictionary<string, object>>();
@@ -22,19 +24,28 @@ namespace Solve
       {
         Dictionary<string, object> fileList = new Dictionary<string, object>();
         // TODO: Look for a way to remove the reflections
-        object folderProp = typeof(MetaData).GetField(folder.name).GetValue(meta);
-        foreach (ResourcesFile file in folder.files)
+        try
         {
-          object fileProp = folderProp.GetType().GetField(file.name).GetValue(folderProp);
-          ExternalFile externalFile = (ExternalFile)fileProp;
-          string placeholderPath = "External Resources/Placeholders/" + file.placeholder;
-          string filePath = folderPath + "/" + externalFile.fileName;
-          object objectLoaded = null;
-          if (folder.fileType == ResourceType.Sprite)
-            objectLoaded = ImageLoader.LoadSprite(filePath, placeholderPath, externalFile.width, externalFile.height);
-          else if (folder.fileType == ResourceType.Texture2D)
-            objectLoaded = ImageLoader.LoadTexture2D(filePath, placeholderPath, externalFile.width, externalFile.height);
-          fileList.Add(file.name, objectLoaded);
+          object folderProp = typeof(MetaData).GetField(folder.name).GetValue(meta);
+          foreach (string file in folder.files)
+          {
+            object fileProp = folderProp.GetType().GetField(file).GetValue(folderProp);
+            string filePath = folderPath + "/" + (string)fileProp;
+            object objectLoaded = null;
+            ResourceType type = Enum.Parse<ResourceType>(folder.fileType);
+            if (type == ResourceType.Sprite)
+              objectLoaded = ImageLoader.LoadSprite(filePath, placeholderPath + "sprite");
+            else if (type == ResourceType.Texture2D)
+              objectLoaded = ImageLoader.LoadTexture2D(filePath, placeholderPath + "texture2d");
+            else if (type == ResourceType.Video)
+              objectLoaded = VideoLoader.LoadVideo(filePath, placeholderPath + "video");
+            fileList.Add(file, objectLoaded);
+          }
+        }
+        catch
+        {
+          DebugController.Error(typeof(FilesLoader), "Error while loading files in folder " + folder.name);
+          DebugController.Error(typeof(FilesLoader), "FolderPath " + folderPath);
         }
         return fileList;
       }
