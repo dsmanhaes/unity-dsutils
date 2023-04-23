@@ -1,0 +1,28 @@
+{
+  "idle": {
+    "balaoMagali": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "botao": "Lorem ipsum"
+  },
+  "choose": {
+    "buttonBack": "Lorem ipsum",
+    "buttonNext": "Lorem ipsum",
+    "buttonFinish": "Lorem ipsum",
+    "balaoMagali01": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali01Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali02": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali02Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali03": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali03Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali04": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali04Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali05": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali05Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali06": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali06Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali07": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "balaoMagali07Choosed": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor."
+  },
+  "end": {
+    "balaoMagali": "Lorem <b>ipsum</b> dolor sit\namet, consectetur adipiscing elit, sed do eiusmod tempor."
+  }
+}

@@ -10,7 +10,9 @@ namespace Solve
     {
       public Board firstBoard;
       private static BoardController _controller;
-      private Board _actualBoard;
+      private static Board _actualBoard;
+      public static Board actualBoard
+      { get { return _actualBoard; } }
       public void Awake()
       {
         if (firstBoard == null)
@@ -24,9 +26,9 @@ namespace Solve
       }
       public static void ChangeTo(Board board)
       {
-        _controller._actualBoard.Hide();
-        _controller._actualBoard = board;
-        _controller._actualBoard.Show();
+        _actualBoard.Hide();
+        _actualBoard = board;
+        _actualBoard.Show();
       }
       public static void Reset()
       {

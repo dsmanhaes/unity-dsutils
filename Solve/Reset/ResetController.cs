@@ -4,14 +4,13 @@ namespace Solve
 {
   namespace Reset
   {
-    using Board;
     using Debug;
     using ExternalResources;
 
     public class ResetController : MonoBehaviour
     {
       public delegate void Reset();
-      public Reset OnReset;
+      public static Reset OnReset;
       private int _resetTime;
       private float _elapsedTime = 0;
       public void Awake()
@@ -28,7 +27,6 @@ namespace Solve
       }
       private void onReset ()
       {
-        BoardController.Reset();
         OnReset?.Invoke();
       }
       public void OnMouseDown()
