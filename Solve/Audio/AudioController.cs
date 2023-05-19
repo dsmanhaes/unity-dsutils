@@ -1,11 +1,9 @@
-using UnityEngine;
-
 namespace Solve
 {
   namespace Audio
   {
+    using UnityEngine;
     using Debug;
-
     public static class AudioController
     {
       private static Transform _transform;
@@ -41,6 +39,10 @@ namespace Solve
         AudioSource source = Play(clip);
         source.loop = loop;
         return source;
+      }
+      public static void StopAll()
+      {
+        Object.Destroy(_controller.gameObject);
       }
     }
   }
