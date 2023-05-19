@@ -7,7 +7,8 @@ namespace Solve
     {
       Sprite,
       Texture2D,
-      Video
+      Video,
+      Audio
     }
   }
 }

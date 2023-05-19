@@ -39,6 +39,8 @@ namespace Solve
               objectLoaded = ImageLoader.LoadTexture2D(filePath, placeholderPath + "texture2d");
             else if (type == ResourceType.Video)
               objectLoaded = VideoLoader.LoadVideo(filePath, placeholderPath + "video");
+            else if (type == ResourceType.Audio)
+              objectLoaded = AudioLoader.LoadAudio(filePath, placeholderPath + "audio");
             fileList.Add(file, objectLoaded);
           }
         }

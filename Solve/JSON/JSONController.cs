@@ -13,10 +13,11 @@ namespace Solve
       {
         get
         {
-          if (Application.platform == RuntimePlatform.Android)
+          #if UNITY_ANDROID && !UNITY_EDITOR
             return Application.persistentDataPath + "/_res/";
-          else
+          #else
             return Application.dataPath + "/../_res/";
+          #endif
         }
       }
       public static T GetObject<T>(string filename, T defaultValues)

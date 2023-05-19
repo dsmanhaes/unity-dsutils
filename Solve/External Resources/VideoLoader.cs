@@ -13,9 +13,8 @@ namespace Solve
       {
         if (File.Exists(filePath))
         {
-          string uri = "file://" + filePath;
           DebugController.Log(typeof(ResourceFetch), "Video loaded at: " + filePath);
-          return new KeyValuePair<VideoSource, object>(VideoSource.Url, uri);
+          return new KeyValuePair<VideoSource, object>(VideoSource.Url, "file://" + filePath);
         }
         else
         {

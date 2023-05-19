@@ -43,13 +43,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1835495648946812237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c651e2ae39afcf240a581d085d05e4f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 22764c47a0a863a47aae61e238e07ab0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camWidth: 0
-  camHeight: 0
-  camFPS: 0
-  mirrored: 0
+  camWidth: 1920
+  camHeight: 1080
+  camFPS: 30
+  mirrored: 1
 --- !u!23 &1835495648946812238
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -70,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 93437173c3a1ec14782ef20b2f1c880d, type: 2}
+  - {fileID: 2100000, guid: ee2028beb282d6f489712fe78b85ada8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

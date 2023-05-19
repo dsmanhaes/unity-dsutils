@@ -28,6 +28,8 @@ namespace Solve
           type = _resourceType;
           folder = _resourceFolder;
           file = _resourceFile;
+          _resourceFolder = null;
+          _resourceFile = null;
         }
       }
       public void Start()
