@@ -24,14 +24,14 @@ namespace Solve
       }
       private static void LoadConfig()
       {
-        string path = Application.dataPath + "/../../postal.json";
+        string path = "postal.json";
         PostalConfig defaultConfig = new PostalConfig();
         defaultConfig.url = "https://postal.social/projeto/?";
         defaultConfig.abspath = "C:/Teste/";
-        _configs = JSONController<PostalConfig>.GetObject(path, defaultConfig);
+        _configs = JSONController.GetObject<PostalConfig>(path, defaultConfig);
         if (string.IsNullOrEmpty(_configs.url) ||
             string.IsNullOrEmpty(_configs.abspath))
-        _configs = JSONController<PostalConfig>.OverwriteObject(path, defaultConfig);
+        _configs = JSONController.OverwriteObject<PostalConfig>(path, defaultConfig);
         DebugController.Log(typeof(PostalController), "Configurations loaded");
       }
     }
