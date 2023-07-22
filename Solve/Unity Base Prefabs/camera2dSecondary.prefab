@@ -5,6 +5,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5410352162287707983, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
@@ -13,15 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5410352162287707983, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 960
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410352162287707983, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5410352162287707983, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -200
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 5410352162287707983, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,16 +48,18 @@ PrefabInstance:
       propertyPath: m_TargetDisplay
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5410352162287708080, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
-      propertyPath: orthographic size
-      value: 540
-      objectReference: {fileID: 0}
     - target: {fileID: 5410352162287708083, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
       propertyPath: m_Name
-      value: camera2Sec
+      value: camera2dSecondary
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5410352162287708082, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5410352162287708083, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6807300940969403507}
   m_SourcePrefab: {fileID: 100100000, guid: 18915cb71d5c73e47975e0fae048b7d3, type: 3}
 --- !u!1 &7435005917160134991 stripped
 GameObject:

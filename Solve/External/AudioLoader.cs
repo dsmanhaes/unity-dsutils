@@ -24,7 +24,7 @@ namespace Solve
             DebugController.Log(typeof(AudioLoader), "Created placeholder at: " + filePath);
           }
           DebugController.Log(typeof(AudioLoader), "Loading file at: " + filePath);
-          using (UnityWebRequest webRequest = UnityWebRequestMultimedia.GetAudioClip("file://" + filePath, AudioType.MPEG))
+          using (UnityWebRequest webRequest = UnityWebRequestMultimedia.GetAudioClip("file://" + filePath, AudioType.UNKNOWN))
           {
             webRequest.SendWebRequest();
             while (!webRequest.isDone) { }

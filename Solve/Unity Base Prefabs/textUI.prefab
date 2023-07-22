@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 7570056092881790311}
   - component: {fileID: 6481778669013066097}
   m_Layer: 0
-  m_Name: textUI
+  m_Name: TextUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &574359711768902174
 RectTransform:

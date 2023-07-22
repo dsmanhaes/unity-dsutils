@@ -16,16 +16,32 @@ namespace Solve
           Texture2D texture = new Texture2D(0, 0);
           if (File.Exists(filePath))
           {
-            byte[] fileData = File.ReadAllBytes(filePath);
-            texture.LoadImage(fileData);
-            DebugController.Log(typeof(ImageLoader), "Image loaded at: " + filePath);
+            try
+            {
+              byte[] fileData = File.ReadAllBytes(filePath);
+              texture.LoadImage(fileData);
+              DebugController.Log(typeof(ImageLoader), "Image loaded at: " + filePath);
+            }
+            catch
+            {
+              DebugController.Error(typeof(ImageLoader), "Failed to load image at: " + filePath);
+              return null;
+            }
           }
           else
           {
-            texture = Resources.Load<Texture2D>(placeholderPath);
-            byte[] bytes = texture.EncodeToPNG();
-            File.WriteAllBytes(filePath, bytes);
-            DebugController.Log(typeof(ImageLoader), "Created placeholder at: " + filePath);
+            try
+            {
+              texture = Resources.Load<Texture2D>(placeholderPath);
+              byte[] bytes = texture.EncodeToPNG();
+              File.WriteAllBytes(filePath, bytes);
+              DebugController.Log(typeof(ImageLoader), "Created placeholder at: " + filePath);
+            }
+            catch
+            {
+              DebugController.Error(typeof(ImageLoader), "Failed to load image at: Resources/" + placeholderPath);
+              return null;
+            }
           }
           return texture;
         }

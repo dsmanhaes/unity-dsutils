@@ -8,11 +8,12 @@ namespace Solve
       [System.Serializable]
       public enum ResourceType
       {
-        None,
-        Sprite,
-        Texture2D,
-        Video,
-        AudioClip
+        None = 0,
+        Sprite = 1,
+        Texture2D = 2,
+        Video = 3,
+        AudioClip = 4,
+        Text = 5
       }
     }
   }

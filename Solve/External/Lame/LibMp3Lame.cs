@@ -689,6 +689,8 @@ namespace NAudio.Lame.DLL
             const string libname = @"__Internal";
 #elif UNITY_ANDROID
             const string libname = @"mp3lame";
+#else
+            const string libname = @"libmp3lame.dll";
 #endif
 
             // typedef void (*lame_report_function)(const char *format, va_list ap);
