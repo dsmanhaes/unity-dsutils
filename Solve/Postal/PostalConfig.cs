@@ -5,8 +5,8 @@ namespace Solve
     [System.Serializable]
     public class PostalConfig
     {
-      public string url;
-      public string abspath;
+      public string url = "https://postal.social/projeto/?";
+      public string abspath = "C:/Teste/";
     }
   }
 }

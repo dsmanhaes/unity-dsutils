@@ -26,8 +26,6 @@ namespace Solve
       {
         string path = "postal.json";
         PostalConfig defaultConfig = new PostalConfig();
-        defaultConfig.url = "https://postal.social/projeto/?";
-        defaultConfig.abspath = "C:/Teste/";
         _configs = JSONController.GetObject<PostalConfig>(path, defaultConfig);
         if (string.IsNullOrEmpty(_configs.url) ||
             string.IsNullOrEmpty(_configs.abspath))

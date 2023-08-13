@@ -7,6 +7,7 @@ namespace Solve
 #endif
     using UnityEngine;
     using UnityEngine.UI;
+    using UnityEngine.Video;
     using Impl;
     using Debug;
     using TMPro;
@@ -33,6 +34,8 @@ namespace Solve
           LoadSprite(folder, file);
         else if (type == ResourceType.AudioClip)
           LoadAudio(folder, file);
+        else if (type == ResourceType.Video)
+          LoadVideo(folder, file);
         else if (type == ResourceType.Text)
           LoadText(folder, file);
         gameObject.name = file;
@@ -60,6 +63,14 @@ namespace Solve
         GetComponent<AudioSource>().loop = loop;
         if (autoPlay) GetComponent<AudioSource>().Play();
       }
+      private void LoadVideo(string folder, string file)
+      {
+        var video = (Video)External.ars.contents[folder][file];
+        GetComponent<VideoPlayer>().url = video.uri;
+        GetComponent<VideoPlayer>().isLooping = loop;
+        if (autoPlay) GetComponent<VideoPlayer>().Play();
+        else GetComponent<VideoPlayer>().Prepare();
+      }
 #if UNITY_EDITOR
       [CustomEditor(typeof(ResourceFetch))]
       public class ResourceFetchEditor : Editor
@@ -68,7 +79,7 @@ namespace Solve
         {
           base.OnInspectorGUI();
           var script = (ResourceFetch)target;
-          if (script.type == ResourceType.AudioClip)
+          if (script.type == ResourceType.AudioClip || script.type == ResourceType.Video)
           {
             script.autoPlay = EditorGUILayout.Toggle("Auto Play", script.autoPlay);
             script.loop = EditorGUILayout.Toggle("Loop", script.loop);

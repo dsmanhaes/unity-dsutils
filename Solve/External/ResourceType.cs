@@ -4,6 +4,11 @@ namespace Solve
   {
     namespace Impl
     {
+      // TODO: Look for a better way to treat videos
+      public struct Video
+      {
+        public string uri;
+      }
       // TODO: Implements other formats importation
       [System.Serializable]
       public enum ResourceType
