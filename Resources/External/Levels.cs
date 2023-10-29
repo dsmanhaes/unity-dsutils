@@ -9,6 +9,14 @@ namespace Solve
       public class Levels
       {
         [System.Serializable]
+        public class Dyno
+        {
+          public string species;
+          public string questionText;
+          public string mistakeText;
+          public string rightText;
+        }
+        [System.Serializable]
         public class Cor
         {
           public Color cor;
