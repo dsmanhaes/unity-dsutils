@@ -12,6 +12,7 @@ namespace Solve
     public static class External
     {
       private const string CONFIG_FILENAME = "configs.json";
+      private const string LEVELS_FILENAME = "levels.json";
       private const string TEXTS_FILENAME = "texts.json";
       private const string RES_FOLDER = "_res/";
       private const string CONTENTS_FIELD = "contents";
@@ -20,10 +21,13 @@ namespace Solve
       private const string AUDIO_EXTENSION = ".mp3";
       private const string VIDEO_EXTENSION = ".mp4";
       private static Configs _configs;
+      private static Levels _levels;
       private static Texts _texts;
       private static Ars _ars;
       public static Configs configs
       { get { return (_configs == null) ? Load<Configs>(out _configs, CONFIG_FILENAME) : _configs; } }
+      public static Levels levels
+      { get { return (_levels == null) ? Load<Levels>(out _levels, LEVELS_FILENAME) : _levels; } }
       public static Texts texts
       { get { return (_texts == null) ? Load<Texts>(out _texts, TEXTS_FILENAME) : _texts; } }
       public static Ars ars
