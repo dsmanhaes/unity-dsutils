@@ -14,7 +14,7 @@ namespace Solve
         {
           public AudioClip click;
         }
-        public class Base
+        public class Element
         {
           public Sprite base01;
         }
@@ -23,7 +23,7 @@ namespace Solve
           public Sprite bg;
         }
         public Audios audios = new Audios();
-        public Base base = new Base();
+        public Element element = new Element();
         public TelaIdle telaIdle = new TelaIdle();
       }
     }
